@@ -2055,8 +2055,7 @@ int wiringPiSetup (void)
 //	time later with a weird error message because you run out of file-handles.
 
   if (alreadyCalled)
-    (void)wiringPiFailure (WPI_FATAL, "wiringPiSetup*: You must only call this once per program run. This is a fatal error. Please fix your code.\n") ;
-
+    return 0;
   alreadyCalled = TRUE ;
 
 
